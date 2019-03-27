@@ -65,10 +65,6 @@ export class Store<S = any, A extends redux.Action = redux.AnyAction> {
   /**
    * Dispatch an action to the background using messaging passing
    * @param data The action data to dispatch
-   * 
-   * Note: Although the return type is specified as the action, react-chrome-redux will
-   * wrap the result in a responsePromise that will resolve/reject based on the
-   * action response from the background page
    */
   dispatch<A>(data: A): Promise<any>;
 }
